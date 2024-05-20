@@ -1,0 +1,101 @@
+// 공통 스타일
+
+@mixin flexcenter {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbetween {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.position-relative {
+    position: relative !important;
+}
+.position-absolute {
+    position: absolute !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.jcc {
+    justify-content: center;
+}
+.jcb {
+    justify-content: space-between;
+}
+.aic {
+    align-items: center;
+}
+.flexcenter {
+    @include flexcenter;
+}
+.flexbetween {
+    @include flexbetween;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+// 커스터마이징
+#hd {
+    padding: 0 2rem;
+    h1 {
+        font-size: 1.4rem;
+    }
+    .gnb {
+        &:hover {
+            &::before {
+                height: 180px;
+            }            
+            .gnb_li {
+                &:hover {
+                    .gnb_a {
+                        color: red;
+                    }
+                }
+                .gnb_ul {
+                    height: 180px;
+                    li:hover {
+                        a {                        
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 0;
+            background-color: rgba(0,0,0,.5);
+            transition: .5s;
+        }
+        .gnb_li {
+            padding: 0 1rem;
+            line-height: 2;
+            .gnb_a {
+                display: block;
+                line-height: 60px;
+                font-size: 1.1rem;                
+            }
+            .gnb_ul {
+                top: 100%;
+                left: 0;
+                min-width: 120px;
+                height: 0;
+                overflow: hidden;
+                transition: .5s;
+            }
+        }
+    }
+    .iconMenu {}
+    .member {}
+}

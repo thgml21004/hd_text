@@ -1,0 +1,86 @@
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+.flexcenter {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbetween {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+#hd {
+  padding: 0 2rem;
+}
+#hd h1 {
+  font-size: 1.4rem;
+}
+#hd .gnb:hover::before {
+  height: 180px;
+}
+#hd .gnb:hover .gnb_li:hover .gnb_a {
+  color: red;
+}
+#hd .gnb:hover .gnb_li .gnb_ul {
+  height: 180px;
+}
+#hd .gnb:hover .gnb_li .gnb_ul li:hover a {
+  color: red;
+}
+#hd .gnb::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+#hd .gnb .gnb_li {
+  padding: 0 1rem;
+  line-height: 2;
+}
+#hd .gnb .gnb_li .gnb_a {
+  display: block;
+  line-height: 60px;
+  font-size: 1.1rem;
+}
+#hd .gnb .gnb_li .gnb_ul {
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
